@@ -2,9 +2,13 @@
 
 <ul id="tags">
   <% @tags.each do |tag| %>
-    <li>
-      <%= link_to tag.name, tag_path(tag) %>
-    </li>
+    <% if tag.articles.size.zero?
+      tag.destroy
+    else %>
+      <li>
+        <%= link_to tag.name, tag_path(tag) %>
+      </li>
+    <% end %>
   <% end %>
 </ul>
 

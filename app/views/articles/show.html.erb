@@ -8,6 +8,11 @@
   <%= link_to "See All Tags", tags_path %>
 </p>
 <p><%= @article.body %></p>
+<p>
+  <% if @article.image.exists? %>
+    <%= image_tag @article.image.url %>
+  <% end %>
+</p>
 <%= render partial: 'comments/form' %>
 <%= link_to "<< Back to Articles List", articles_path %>
 <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"}%>

@@ -4,6 +4,8 @@
   <% @article.tags.each do |tag| %>
     <%= link_to tag.name, tag_path(tag) %>
   <% end %>
+
+  <%= link_to "See All Tags", tags_path %>
 </p>
 <p><%= @article.body %></p>
 <%= render partial: 'comments/form' %>

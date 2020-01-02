@@ -4,4 +4,6 @@
   <% @tag.articles.each do |article| %>
     <li><%= link_to article.title, article_path(article) %></li>
   <% end %>
+
+  <%= link_to "<< Back to Tags List", tags_path %>
 </ul>

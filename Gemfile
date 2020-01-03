@@ -63,3 +63,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Gems for the tutorial
 gem 'paperclip'
+gem 'sorcery'
